@@ -45,3 +45,4 @@ set_env.sh
 aws-secret.yaml
 env-secret.yaml
 env-configmap.yaml
+deploy.sh
