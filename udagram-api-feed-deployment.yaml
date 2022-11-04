@@ -32,8 +32,9 @@ spec:
         volumeMounts:
           - mountPath: "/root/.aws"
             name: credentials
+            readOnly: true
       volumes:
         - name: credentials
-          configMap:
-            name: awscredentials
+          secret:
+            secretName: awscredentials
         
