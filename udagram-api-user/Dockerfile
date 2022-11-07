@@ -9,4 +9,5 @@ RUN yarn install
 # Bundle app source
 COPY . .
 EXPOSE 8080
+RUN yarn build
 CMD [ "npm", "run", "prod" ]
