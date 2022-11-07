@@ -17,8 +17,9 @@ spec:
       containers:
       - name: udagram-api-user
         image: raoulkuate/udagram-api-user:v2
+        imagePullPolicy: Always
         ports:
-        - containerPort: 8080
+          - containerPort: 8080
         resources:
           limits:
             cpu: 500m
@@ -29,4 +30,3 @@ spec:
               name: appconfig
           - secretRef:
               name: dbconfig
-        imagePullPolicy: Always
