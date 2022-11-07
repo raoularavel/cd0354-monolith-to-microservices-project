@@ -43,5 +43,5 @@ venv/
 deploy_script.sh
 set_env.sh
 aws-secret.yaml
-env-secret.yaml
+db-env-secret.yaml
 env-configmap.yaml

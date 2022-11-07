@@ -17,6 +17,7 @@ spec:
       containers:
       - name: udagram-api-feed
         image: raoulkuate/udagram-api-feed:v2
+        imagePullPolicy: Always
         ports:
         - containerPort: 8080
         resources:
@@ -26,7 +27,7 @@ spec:
             cpu: 200m
         envFrom:
           - configMapRef:
-              name: awsconfig
+              name: appconfig
           - secretRef:
               name: dbconfig
         volumeMounts:
@@ -37,4 +38,5 @@ spec:
         - name: credentials
           secret:
             secretName: awscredentials
+
         

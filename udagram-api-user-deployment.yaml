@@ -26,6 +26,7 @@ spec:
             cpu: 200m
         envFrom:
           - configMapRef:
-              name: awsconfig
+              name: appconfig
           - secretRef:
               name: dbconfig
+        imagePullPolicy: Always
