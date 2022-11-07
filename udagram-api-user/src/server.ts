@@ -17,7 +17,7 @@ import { V0_USER_MODELS } from './controllers/v0/model.index';
   await sequelize.sync();
 
   const app = express();
-  const port = process.env.PORT || 8080;
+  const port = process.env.PORT || 80;
 
   app.use(bodyParser.json());
 
@@ -44,7 +44,7 @@ import { V0_USER_MODELS } from './controllers/v0/model.index';
 
 
   // Start the Server
-  app.listen(port, () => {
+  app.listen(Number(port),"0.0.0.0", () => {
     console.log(`server running ${config.url}`);
     console.log(`press CTRL+C to stop server`);
   });
