@@ -6,8 +6,8 @@ WORKDIR /usr/src/app
 COPY package*.json ./
 COPY yarn.lock ./
 RUN yarn install 
+RUN yarn build 
 # Bundle app source
 COPY . .
 EXPOSE 8080
-CMD [ "npm", "run", "build" ]
 CMD [ "npm", "run", "prod" ]
