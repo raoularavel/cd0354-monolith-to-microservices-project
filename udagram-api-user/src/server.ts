@@ -17,7 +17,7 @@ import { V0_USER_MODELS } from './controllers/v0/model.index';
   await sequelize.sync();
 
   const app = express();
-  const port = process.env.PORT || 80;
+  const port = 80;
 
   app.use(bodyParser.json());
 

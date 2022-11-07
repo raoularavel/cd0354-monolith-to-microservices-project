@@ -16,10 +16,10 @@ spec:
     spec:
       containers:
       - name: udagram-api-feed
-        image: raoulkuate/udagram-api-feed:v2
+        image: raoulkuate/udagram-api-feed:v3
         imagePullPolicy: Always
         ports:
-          - containerPort: 8080
+          - containerPort: 80
         resources:
           limits:
             cpu: 500m
